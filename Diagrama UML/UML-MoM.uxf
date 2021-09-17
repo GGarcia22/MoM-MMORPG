@@ -1,0 +1,59 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>190</x><y>80</y><w>210</w><h>190</h></coordinates><panel_attributes>Personaje
+--
+- nombre: String
+- vida: double
+- arma: Arma
+- armadura: Armadura
+_- VIDAMAX: int: 100_
+_- VIDAMIN: int: 0_
+--
++ dañar(): void
++ usarItem(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>920</x><y>410</y><w>210</w><h>190</h></coordinates><panel_attributes>/Arma/
+--
+- nombre: String
+- dañoBase: double
+--
++ equiparItem(): void
+/+ dañoInfligido(): double/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>630</x><y>410</y><w>210</w><h>190</h></coordinates><panel_attributes>Armadura
+--
+- nombre: String
+- defensa: double
+--
++ equiparItem(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>710</x><y>90</y><w>190</w><h>170</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+/Utilizable/
+--
+/+ equiparItem(): void/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>160</y><w>340</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- inventario</panel_attributes><additional_attributes>320;30;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>410</y><w>210</w><h>190</h></coordinates><panel_attributes>Comida
+--
+- nombre: String
+- vidaQueCura: double
+- cantidad: int
+--
++ equiparItem(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1110</x><y>130</y><w>210</w><h>190</h></coordinates><panel_attributes>Flecha
+--
+- daño: double
+- stock: int
+-
++ equiparItem(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>920</x><y>680</y><w>210</w><h>120</h></coordinates><panel_attributes>Hacha
+--
+- probabilidadDeCritico: float
+--
++ dañoInfligido(): double
++ golpeCritico(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>690</y><w>210</w><h>110</h></coordinates><panel_attributes>Espada
+--
+
+--
++ dañoInfligido(): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1190</x><y>680</y><w>180</w><h>120</h></coordinates><panel_attributes>Arco
+--
+- tieneFlechas: boolean
+--
++ dañoInfligido(): double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>760</x><y>590</y><w>210</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>190;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>1010</x><y>590</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>1090</x><y>590</y><w>240</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;220;90</additional_attributes></element><element><id>Relation</id><coordinates><x>840</x><y>250</y><w>190</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;170;160</additional_attributes></element><element><id>Relation</id><coordinates><x>890</x><y>190</y><w>240</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;220;30</additional_attributes></element><element><id>Relation</id><coordinates><x>730</x><y>250</y><w>80</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>60;10;10;160</additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>250</y><w>290</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>270;10;10;160</additional_attributes></element><element><id>Relation</id><coordinates><x>1290</x><y>310</y><w>100</w><h>390</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;80;370</additional_attributes></element><element><id>UMLClass</id><coordinates><x>60</x><y>340</y><w>190</w><h>170</h></coordinates><panel_attributes>&lt;&lt;enums&gt;&gt;
+Estado
+--
+_+ VIVO_
+_+ HERIDO_
+_+ MUERTO_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>260</y><w>130</w><h>100</h></coordinates><panel_attributes>lt=&lt;-
+- estadoSalud</panel_attributes><additional_attributes>10;80;110;10</additional_attributes></element></diagram>
