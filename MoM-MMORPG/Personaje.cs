@@ -102,7 +102,7 @@ namespace MoM_MMORPG
         {
             Utilizable itemEncontrado = null;
             int i = 0;
-            while (i > inventario.Count && itemEncontrado == null)
+            while (i < inventario.Count && itemEncontrado == null)
             {
                 Utilizable u = this.inventario[i];       //trae el objeto segun la posicion 
                 if (u.getNombre().Equals(nombre))
@@ -125,6 +125,7 @@ namespace MoM_MMORPG
                 this.vida = this.vida + c.getVidaCurada();
                 c.setCant(comidaUsada);
                 limiteVida(this.vida);
+                Console.WriteLine("Comiendo...");
             }
             else
             {
@@ -141,6 +142,7 @@ namespace MoM_MMORPG
             try
             {
                 arma.equiparMunicion(f);
+                Console.WriteLine("Equipaste flechas en tu arco.");
             }
             catch (Exception e)
             {
