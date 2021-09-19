@@ -40,11 +40,6 @@ namespace MoM_MMORPG
 
         public void elegirPersonaje()
         {
-            bool salir = false;
-
-            while (!salir)
-            {
-
                 try
                 {
                     mostrarTitulo();
@@ -78,8 +73,6 @@ namespace MoM_MMORPG
                 {
                     Console.WriteLine(e.Message);
                 }
-            }
-
             Console.ReadLine();
 
         }
@@ -115,6 +108,7 @@ namespace MoM_MMORPG
 
                         case 3:
                             Console.WriteLine("Escapando!");
+                            salir = true;
                             salirJuego();
                             break;
                     }
@@ -150,17 +144,16 @@ namespace MoM_MMORPG
                             Console.WriteLine("Que item deseas equipar?");
                             String item = Console.ReadLine();
                             this.pjPrincipal.equiparItem(item);
-                            menuPersonaje();
                             break;
 
                         case 2:
                             Console.WriteLine("Ya no tienes un arma equipada");
                             this.pjPrincipal.desequiparArma();
-                            menuPersonaje();
                             break;
                         case 3:
                             Console.WriteLine("Cerrando inventario...");
-                            menuPersonaje();
+                            salir = true;
+                            Console.WriteLine("► Presione enter para volver al menu ◄");
                             break;
                     }
 
